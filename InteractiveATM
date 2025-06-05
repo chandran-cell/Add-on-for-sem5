@@ -1,0 +1,65 @@
+package day1;
+
+import java.util.Scanner; 
+
+public class InteractiveATM {
+
+    public static void main(String[] args) {
+      
+        int correctPin = 1234;
+        double currentBalance = 1000.00;
+
+        
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Welcome to the ATM!");
+        System.out.print("Please enter your 4-digit PIN: ");
+
+       
+        int enteredPin = scanner.nextInt(); 
+
+        
+        if (enteredPin == correctPin) {
+            System.out.println("\nPIN accepted. What would you like to do?");
+            System.out.println("1. Withdraw Cash");
+            System.out.println("2. Check Balance");
+            System.out.print("Enter your choice (1 or 2): ");
+
+           
+            int transactionChoice = scanner.nextInt(); 
+
+            
+            if (transactionChoice == 1) { 
+                System.out.print("Enter amount to withdraw: $");
+              
+                double withdrawalAmount = scanner.nextDouble(); 
+
+                
+                if (withdrawalAmount > 0) { 
+                    if (currentBalance >= withdrawalAmount) {
+                        currentBalance -= withdrawalAmount; // Deduct amount
+                        System.out.println("\nPlease take your cash: $" + withdrawalAmount);
+                        System.out.printf("Your new balance is: $%.2f%n", currentBalance); // Format to 2 decimal places
+                    } else {
+                        System.out.printf("Insufficient funds. Your current balance is: $%.2f%n", currentBalance);
+                    }
+                } else {
+                    System.out.println("Invalid withdrawal amount. Please enter a positive value.");
+                }
+
+            } else if (transactionChoice == 2) { 
+                System.out.println("\nYou chose to check balance.");
+                System.out.printf("Your current balance is: $%.2f%n", currentBalance); 
+            } else {
+                System.out.println("\nInvalid transaction choice. Please enter 1 or 2.");
+            }
+
+        } else {
+            System.out.println("\nIncorrect PIN. Access denied.");
+        }
+
+        
+        scanner.close();
+        System.out.println("\nThank you for using our ATM!");
+    }
+}
