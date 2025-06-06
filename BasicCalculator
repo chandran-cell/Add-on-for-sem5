@@ -1,67 +1,27 @@
-package day1;
-
+package basic;
 import java.util.Scanner;
+public class cal {
 
-public class BasicCalculator {
+        public static void main(String[] args) {
 
-    public static void main(String[] args) {
-        
-        Scanner scanner = new Scanner(System.in);
+   int a=3;
+     switch(a) {
+     case 1:
+     System.out.println("addition of a and b is"+(6+7));
+     break;
+     case 2:
+     System.out.println("subratcion of a and b is"+(8-9));
+     break;
+     case 3:
+     System.out.println("multiplicion of a and b is"+(9*9));
+     break;
+     case 4:
+     System.out.println("divition of a and b is"+(9/5));
+     break;
 
-        double number1;
-        double number2;
-        char operator;
-        double result = 0;
+     default:
+             System.out.println("invaluid input");
 
-        System.out.println("--- Basic Calculator ---");
+        }
 
-        
-        System.out.print("Enter the first number: ");
-        number1 = scanner.nextDouble();
-
-       
-        System.out.print("Enter an operator (+, -, *, /): ");
-        operator = scanner.next().charAt(0); 
-
-        
-        System.out.print("Enter the second number: ");
-        number2 = scanner.nextDouble();
-
-        
-        switch (operator) {
-            case '+':
-                result = number1 + number2;
-                break; 
-
-            case '-':
-                result = number1 - number2;
-                break; 
-            case '*':
-                result = number1 * number2;
-                break; 
-            case '/':
-                
-                if (number2 == 0) {
-                    System.out.println("Error: Division by zero is not allowed.");
-                    
-                    scanner.close(); 
-                    return;
-                }
-                result = number1 / number2;
-                break; 
-
-            default:
-                
-                System.out.println("Error: Invalid operator. Please use +, -, *, or /.");
-                scanner.close(); 
-                return; 
-
-        
-        System.out.println("\n--- Calculation Result ---");
-        System.out.printf("%.2f %c %.2f = %.2f%n", number1, operator, number2, result);
-
-        
-        scanner.close();
-        System.out.println("Calculator session ended.");
-    }
-}
+}}
