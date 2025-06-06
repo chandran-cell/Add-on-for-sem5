@@ -5,7 +5,7 @@
 public class sim {
 
         public static void main(String[] args) {
-                // TODO Auto-generated method stub
+                
                  int p=1000;
                 int r=5;
                 int t=2;
