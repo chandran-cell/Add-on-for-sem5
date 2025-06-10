@@ -1,0 +1,21 @@
+package Oops;
+
+public class defaultConstructor {
+
+	
+
+	 String name;
+
+	 int year;
+
+	
+
+	defaultConstructor(String name,int year){
+
+		this.name=name;
+
+		this.year=year;
+
+		System.out.println("DefaultConstructor:"+name+" "+year);
+
+	}
