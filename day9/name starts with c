@@ -1,0 +1,7 @@
+mysql> select ename from Employee where ename like 'c%';
++----------+
+| ename    |
++----------+
+| chandran |
++----------+
+1 row in set (0.00 sec)
