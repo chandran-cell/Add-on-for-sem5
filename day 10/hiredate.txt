@@ -1,0 +1,27 @@
+mysql> select ename,joindate
+    -> from Employee
+    -> where joindate> '1981-12-31';
++----------+------------+
+| ename    | joindate   |
++----------+------------+
+| soma     | 2026-02-05 |
+| chandran | 2023-01-04 |
+| henry    | 2023-01-04 |
+| kathir   | 2010-01-12 |
+| levy     | 2020-10-16 |
++----------+------------+
+5 rows in set (0.05 sec)
+
+
+
+mysql> select ename,joindate
+    -> from Employee
+    -> where joindate> '2010-12-31' and joindate < '2024-01-10';
++----------+------------+
+| ename    | joindate   |
++----------+------------+
+| chandran | 2023-01-04 |
+| henry    | 2023-01-04 |
+| levy     | 2020-10-16 |
++----------+------------+
+3 rows in set (0.00 sec)
