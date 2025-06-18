@@ -1,0 +1,11 @@
+mysql> select ename
+    -> from employee
+    -> where empid =(select empid
+    -> from employee
+    -> where ename='soma');
++-------+
+| ename |
++-------+
+| soma  |
++-------+
+1 row in set (0.04 sec)
